@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import javax.inject.Inject;
 
@@ -15,7 +16,7 @@ import iammert.com.dagger_android_injection.ui.detail.DetailActivity;
 public class MainActivity extends AppCompatActivity implements MainView{
 
     @Inject
-    MainPresenter mainPresenter;
+    MainPresenterImpl mainPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,9 @@ public class MainActivity extends AppCompatActivity implements MainView{
     }
 
     @Override
-    public void onMainLoaded() {
+    public void onMainLoaded(String data) {
+        TextView tv = findViewById(R.id.text);
+        tv.setText(data);
         Log.v("TEST", "Main page is loaded.");
     }
 }

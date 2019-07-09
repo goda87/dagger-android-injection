@@ -13,13 +13,12 @@ public class MainPresenterImpl implements MainPresenter{
     ApiService apiService;
 
     @Inject
-    public MainPresenterImpl(MainView mainView, ApiService apiService) {
+    public MainPresenterImpl(MainActivity mainView, ApiService apiService) {
         this.mainView = mainView;
         this.apiService = apiService;
     }
 
     public void loadMain(){
-        apiService.loadData();
-        mainView.onMainLoaded();
+        mainView.onMainLoaded(apiService.loadData());
     }
 }

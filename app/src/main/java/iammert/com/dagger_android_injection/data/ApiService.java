@@ -8,11 +8,14 @@ import javax.inject.Inject;
 
 public class ApiService {
 
+    ApiDataSource dataSource;
+
     @Inject
-    public ApiService() {
+    public ApiService(ApiDataSource dataSource) {
+        this.dataSource = dataSource;
     }
 
-    public void loadData(){
-
+    public String loadData(){
+        return dataSource.loadData();
     }
 }

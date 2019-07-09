@@ -8,6 +8,7 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
+import dagger.Lazy;
 import dagger.android.AndroidInjection;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
@@ -26,6 +27,8 @@ public class DetailActivity extends AppCompatActivity implements HasSupportFragm
 
     @Inject
     DetailPresenter detailPresenter;
+
+//    @Inject Lazy<DetailFragment> detailFragmentLazy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

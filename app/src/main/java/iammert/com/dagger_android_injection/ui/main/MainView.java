@@ -5,5 +5,5 @@ package iammert.com.dagger_android_injection.ui.main;
  */
 
 public interface MainView {
-    void onMainLoaded();
+    void onMainLoaded(String data);
 }
