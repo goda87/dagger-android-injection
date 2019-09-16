@@ -1,6 +1,7 @@
 package iammert.com.dagger_android_injection.ui.detail;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import iammert.com.dagger_android_injection.data.ApiService;
 

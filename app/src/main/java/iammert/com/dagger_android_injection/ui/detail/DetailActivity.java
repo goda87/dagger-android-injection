@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import dagger.Lazy;
 import dagger.android.AndroidInjection;
